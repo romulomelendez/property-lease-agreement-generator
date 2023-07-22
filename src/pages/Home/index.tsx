@@ -1,11 +1,11 @@
 import { PdfViewer } from '../../components/PdfViewer'
 
-import { Container, GetStartedContainer, ViewerContainer } from './styles'
+import { Container, GetStartedContainer, ViewerContainer, Title } from './styles'
 
 export const Home = () => (
     <Container>
         <GetStartedContainer>
-            <h1>Get Started Here</h1>
+            <Title>Get Started Here</Title>
         </GetStartedContainer>
 
         <ViewerContainer>
