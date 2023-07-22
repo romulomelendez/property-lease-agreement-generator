@@ -1,9 +1,15 @@
-// import {} from './styles'
+import { PdfViewer } from '../../components/PdfViewer'
 
-export const Home = () => {
+import { Container, GetStartedContainer, ViewerContainer } from './styles'
 
-  return (
-    <div>Home</div>
-  )
+export const Home = () => (
+    <Container>
+        <GetStartedContainer>
+            <h1>Get Started Here</h1>
+        </GetStartedContainer>
 
-}
+        <ViewerContainer>
+            <PdfViewer />
+        </ViewerContainer>
+    </Container>
+)
