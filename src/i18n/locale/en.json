@@ -1,0 +1,11 @@
+{
+    "translation": {
+        "appTitle": "Lease Agreement Generator",
+        "appSubtitle": "Create your own custom lease agreement",
+        "createPdfButton": "Create Now!",
+        "english": "English",
+        "portuguese": "Portuguese",
+        "spanish": "Spanish",
+        "french": "French"
+    }
+}

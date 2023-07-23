@@ -79,7 +79,7 @@ export const Subtitle = styled.h6 `
 
 export const Button = styled.button `
 
-    width: 120px;
+    max-width: 220px;
     padding: 10px;
     outline: none;
     border: none;
@@ -98,13 +98,11 @@ export const Button = styled.button `
     }
 
     @media (min-width: 550px) {
-        width: 140px;
         padding: 12px;
         font-size: 18pt;
     }
 
     @media (min-width: 750px) {
-        width: 150px;
         padding: 15px;
         font-size: 20pt;
     }

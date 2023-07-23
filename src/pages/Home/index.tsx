@@ -1,28 +1,31 @@
 import { useState } from 'react'
 
+import { useTranslation } from 'react-i18next'
+
 import { PdfViewer } from '../../components/PdfViewer'
 import { PdfForm } from '../../components/PdfForm'
+import { DropdownMenu } from '../../components/DropdownMenu'
 
 import { Container, GetStartedContainer, ViewerContainer, Title, Subtitle, Button } from './styles'
-import { DropdownMenu } from '../../components/DropdownMenu'
 
 export const Home = () => {
     
     const [formIsOpen, setFormIsOpen] = useState(true)
 
     const handleOpenCloseForm = () => setFormIsOpen(!formIsOpen)
+    const { t } = useTranslation()
 
     return (
         <Container>
             <GetStartedContainer>
                 <DropdownMenu />
-                <Title>Lease Agreement Generator</Title>
-                <Subtitle>Create your own custom lease agreement</Subtitle>
+                <Title>{t("appTitle")}</Title>
+                <Subtitle>{t("appSubtitle")}</Subtitle>
 
                 {
                     formIsOpen ?
                         <Button type="button" onClick={handleOpenCloseForm}>
-                            Create Now!
+                            {t("createPdfButton")}
                         </Button> 
                     :
                         <PdfForm />
