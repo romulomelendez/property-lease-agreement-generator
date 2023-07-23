@@ -1,15 +1,36 @@
+import { useState } from 'react'
+
 import { PdfViewer } from '../../components/PdfViewer'
+import { PdfForm } from '../../components/PdfForm'
 
-import { Container, GetStartedContainer, ViewerContainer, Title } from './styles'
+import { Container, GetStartedContainer, ViewerContainer, Title, Subtitle, Button } from './styles'
 
-export const Home = () => (
-    <Container>
-        <GetStartedContainer>
-            <Title>Get Started Here</Title>
-        </GetStartedContainer>
+export const Home = () => {
+    
+    const [formIsOpen, setFormIsOpen] = useState(true)
 
-        <ViewerContainer>
-            <PdfViewer />
-        </ViewerContainer>
-    </Container>
-)
+    const handleOpenCloseForm = () => setFormIsOpen(!formIsOpen)
+
+    return (
+        <Container>
+            <GetStartedContainer>
+                <Title>Lease Agreement Generator</Title>
+                <Subtitle>Create your own custom lease agreement</Subtitle>
+
+                {
+                    formIsOpen ?
+                        <Button type="button" onClick={handleOpenCloseForm}>
+                            Create Now!
+                        </Button> 
+                    :
+                        <PdfForm />
+                }
+
+            </GetStartedContainer>
+
+            <ViewerContainer>
+                <PdfViewer />
+            </ViewerContainer>
+        </Container>
+    )
+}

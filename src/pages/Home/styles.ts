@@ -30,5 +30,36 @@ export const ViewerContainer = styled.div `
 export const Title = styled.h1 `
 
     font-family: 'Dancing Script', cursive;
+    font-size: 40pt;
+
+`
+
+export const Subtitle = styled.h6 `
+
+    font-family: 'Dancing Script', cursive;
+    font-size: 18pt;
+    color: #9ba103;
+
+`
+
+export const Button = styled.button `
+
+    width: 170px;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    background-color: #3f7ae0;
+    color: white;
+    font-family: 'Dancing Script', cursive;
+    font-size: 25pt;
+    font-weight: 700;
+    cursor: pointer;
+    margin: 35px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+
+    &:hover {
+        background-color: #3861a8;
+    }
 
 `
