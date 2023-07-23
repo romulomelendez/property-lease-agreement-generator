@@ -1,13 +1,17 @@
 import styled from 'styled-components'
 
 export const Container = styled.div `
-/* @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Dancing+Script&family=Great+Vibes&family=Zeyada&display=swap'); */
 
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 500px 1fr;
     height: 100vh;
     width: 100vw;
     background-color: #cecece;
+
+    @media (min-width: 950px) {
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, 50%);
+    }
 `
 
 export const GetStartedContainer = styled.div `
@@ -16,9 +20,18 @@ export const GetStartedContainer = styled.div `
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
     height: 100%;
     width: 100%;
     background-color: yellow;
+
+    @media (min-width: 362px) {
+        padding: 30px;
+    }
+
+    @media (min-width: 950px) {
+        paddding: 10px;
+    }
 `
 
 export const ViewerContainer = styled.div `
@@ -30,21 +43,43 @@ export const ViewerContainer = styled.div `
 export const Title = styled.h1 `
 
     font-family: 'Dancing Script', cursive;
-    font-size: 40pt;
+    font-size: 28pt;
 
+    @media (min-width: 550px) {
+        font-size: 35pt;
+    }
+
+    @media (min-width: 750px) {
+        font-size: 38pt;
+    }
+
+    @media (min-width: 950px) {
+        font-size: 40pt;
+    }
 `
 
 export const Subtitle = styled.h6 `
 
     font-family: 'Dancing Script', cursive;
-    font-size: 18pt;
+    font-size: 12pt;
     color: #9ba103;
 
+    @media (min-width: 550px) {
+        font-size: 15pt;
+    }
+
+    @media (min-width: 750px) {
+        font-size: 18pt;
+    }
+
+    @media (min-width: 950px) {
+        font-size: 20pt;
+    }
 `
 
 export const Button = styled.button `
 
-    width: 170px;
+    width: 120px;
     padding: 10px;
     outline: none;
     border: none;
@@ -52,7 +87,7 @@ export const Button = styled.button `
     background-color: #3f7ae0;
     color: white;
     font-family: 'Dancing Script', cursive;
-    font-size: 25pt;
+    font-size: 14pt;
     font-weight: 700;
     cursor: pointer;
     margin: 35px;
@@ -62,4 +97,15 @@ export const Button = styled.button `
         background-color: #3861a8;
     }
 
+    @media (min-width: 550px) {
+        width: 140px;
+        padding: 12px;
+        font-size: 18pt;
+    }
+
+    @media (min-width: 750px) {
+        width: 150px;
+        padding: 15px;
+        font-size: 20pt;
+    }
 `
