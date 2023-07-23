@@ -4,6 +4,7 @@ import { PdfViewer } from '../../components/PdfViewer'
 import { PdfForm } from '../../components/PdfForm'
 
 import { Container, GetStartedContainer, ViewerContainer, Title, Subtitle, Button } from './styles'
+import { DropdownMenu } from '../../components/DropdownMenu'
 
 export const Home = () => {
     
@@ -14,6 +15,7 @@ export const Home = () => {
     return (
         <Container>
             <GetStartedContainer>
+                <DropdownMenu />
                 <Title>Lease Agreement Generator</Title>
                 <Subtitle>Create your own custom lease agreement</Subtitle>
 
