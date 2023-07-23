@@ -2,6 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div `
 
+    position: fixed;
+    top: 50px;
     display: flex;
     flex-direction: column;
     max-width: 300px;
@@ -43,10 +45,11 @@ export const SelectLangText = styled.h4 `
 
 export const LangContainer = styled.div `
 
+    position: relative;
     display: flex;
     flex-direction: column;
-    height: 100px;
-    gap: 1px;
+    max-height: 180px;
+    gap: 4px;
     cursor: pointer;
 `
 
