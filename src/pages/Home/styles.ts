@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const Container = styled.div `
 
     display: grid;
-    grid-template-rows: 500px 1fr;
+    grid-template-rows: repeat(2, max-content);
     height: 100vh;
     width: 100vw;
     background-color: #cecece;

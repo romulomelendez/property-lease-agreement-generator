@@ -1,5 +1,14 @@
+import { StepForms } from '../StepForms'
+import { LocatorForm } from '../LocatorForm'
+
 export const PdfForm: React.FC = () => {
+
   return (
-    <div>PdfForm</div>
+
+    <StepForms>
+      <LocatorForm />
+    </StepForms>
+
   )
+
 }
