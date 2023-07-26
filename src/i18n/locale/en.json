@@ -6,6 +6,13 @@
         "english": "English",
         "portuguese": "Portuguese",
         "spanish": "Spanish",
-        "french": "French"
+        "french": "French",
+        "next": "Next",
+        "locator": "LOCATOR",
+        "renter": "RENTER",
+        "name": "Name",
+        "socialSecurityNumber": "Social Security Number",
+        "identityCardNumber": "Identity Card Number",
+        "address": "Address"
     }
 }

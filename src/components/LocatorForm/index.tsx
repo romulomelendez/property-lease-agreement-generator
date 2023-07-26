@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next'
+
 import { FormTitle } from '../FormTitle'
 import { FormInput } from '../FormInput'
 import { ActionButton } from '../ActionButton'
@@ -6,22 +8,24 @@ import { InputContainer, SocialIdsContainer } from './styles'
 
 export const LocatorForm: React.FC = () => {
   
+  const { t } = useTranslation()
+
   return (
     <>
-      <FormTitle text="LOCATOR" />
+      <FormTitle text={t('locator')} />
 
       <InputContainer>
-        <FormInput type="text" placeholder="Name" />
+        <FormInput type="text" placeholder={t('name')} />
 
         <SocialIdsContainer>
-          <FormInput type="number" placeholder="Social Security Number" />
-          <FormInput type="number" placeholder="Identity Card Number" />
+          <FormInput type="number" placeholder={t('socialSecurityNumber')} />
+          <FormInput type="number" placeholder={t('identityCardNumber')} />
         </SocialIdsContainer>
 
-        <FormInput type="text" placeholder="Address" />
+        <FormInput type="text" placeholder={t('address')} />
       </InputContainer>
       
-      <ActionButton text="Next" />
+      <ActionButton text={t('next')} />
     </>
   )
 }

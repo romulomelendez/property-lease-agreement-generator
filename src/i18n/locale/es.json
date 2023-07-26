@@ -6,6 +6,13 @@
     "english": "Inglés",
     "portuguese": "Portugués",
     "spanish": "Español",
-    "french": "francés"
+    "french": "francés",
+    "next": "Próximo",
+    "locator": "LOCADOR",
+    "renter": "INQUILINO",
+    "name": "Nombre",
+    "socialSecurityNumber": "Número de Seguro Social",
+    "identityCardNumber": "Número de Tarjeta de Identidad",
+    "address": "Dirección"
   }
 }

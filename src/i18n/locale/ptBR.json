@@ -6,6 +6,13 @@
     "english": "Inglês",
     "portuguese": "Português",
     "spanish": "Español",
-    "french": "Francês"
+    "french": "Francês",
+    "next": "Próximo",
+    "locator": "LOCADOR",
+    "renter": "LOCATÁRIO",
+    "name": "Nome",
+    "socialSecurityNumber": "Certificado de Pessoa Física",
+    "identityCardNumber": "Identidade",
+    "address": "Endereço"
   }
 }
