@@ -13,7 +13,7 @@ export const RentalForm: React.FC = () => {
     return (
         
         <>
-            <FormTitle text={t('rentalPropreties')} />
+            <FormTitle text={t('rental')} />
 
             <InputContainer>
                 <InputDate type="date" placeholder={t('startDate')} />
