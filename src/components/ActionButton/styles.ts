@@ -6,16 +6,14 @@ export const Button = styled.button `
     justify-content: center;
     align-items: center;
     gap: 4px;
-    max-width: 150px;
-    width: 100%;
-    padding: 5px;
+    width: 80px;
+    padding: 10px;
     outline: none;
     border: none;
     border-radius: 4px;
     background-color: #3f7ae0;
     color: white;
     cursor: pointer;
-    /* margin: 35px; */
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
     &:hover {
@@ -23,11 +21,12 @@ export const Button = styled.button `
     }
 
     @media (min-width: 550px) {
-        padding: 10px;
+        width: 150px;
+        padding: 12px;
     }
 
     @media (min-width: 750px) {
-        padding: 12px;
+        padding: 13px;
     }
 `
 
