@@ -33,7 +33,7 @@ export const Button = styled.button `
 export const BtnText = styled.h5 `
 
     font-family: 'REM', sans-serif;
-    font-size: 13pt;
+    font-size: 11pt;
     font-weight: 700;
 
     @media (min-width: 550px) {

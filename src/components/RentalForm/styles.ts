@@ -7,9 +7,9 @@ export const InputContainer = styled.section `
     row-gap: 10px;
 
     @media (min-width: 550px) {
-        display: grid;
+        grid-template-rows: none;
+        grid-template-columns: repeat(2, 50%);
         height: 100px;
-        grid-template-columns: repeat(2, auto);
         grid-gap: 15px;
     }
 `
@@ -24,13 +24,13 @@ export const InputDate = styled.input `
     outline: none;
     width: 100%;
     padding: 10px;
-    height: 44px;
+    height: 45px;
 
 `
 
 export const BtnContainer = styled.section `
 
-    display: grid;
-    grid-template-columns: repeat(2, auto);
+    display: flex;
+    justify-content: space-between;
     column-gap: 15px;
 `

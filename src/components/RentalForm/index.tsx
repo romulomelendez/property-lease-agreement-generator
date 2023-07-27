@@ -19,7 +19,7 @@ export const RentalForm: React.FC = () => {
                 <InputDate type="date" placeholder={t('startDate')} />
                 <InputDate type="date" placeholder={t('endDate')} />
                 <FormInput type="number" placeholder={t('rentalAmount')} />
-                <FormInput type="number" placeholder={t('dueDate')} />
+                <InputDate type="date" placeholder={t('dueDate')} />
             </InputContainer>
 
             <BtnContainer>
