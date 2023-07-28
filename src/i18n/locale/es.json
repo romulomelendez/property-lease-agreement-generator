@@ -12,6 +12,8 @@
     "locator": "LOCADOR",
     "renter": "ARRENDATARIO",
     "rental": "ALQUILER",
+    "witness": "TESTIGO",
+    "guarantor": "GARANTE",
     "startDate": "Fecha de Inicio",
     "endDate": "Fecha Final",
     "rentalAmount": "Monto del Alquiler",

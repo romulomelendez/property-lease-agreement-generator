@@ -12,6 +12,8 @@
     "locator": "LOCADOR",
     "renter": "LOCATÁRIO",
     "rental": "ALUGUEL",
+    "witness": "TESTEMUNHA",
+    "guarantor": "FIADOR",
     "startDate": "Data de Entrada",
     "endDate": "Data de Saída",
     "rentalAmount": "Valor do Aluguel",

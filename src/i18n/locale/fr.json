@@ -12,6 +12,8 @@
         "locator": "LOCALISATEUR",
         "renter": "LOUEUR",
         "rental": "DE LOCATION",
+        "witness": "TÉMOIN",
+        "guarantor": "GARANT",
         "startDate": "Date de début",
         "endDate": "Date de fin",
         "rentalAmount": "Montant de la location",

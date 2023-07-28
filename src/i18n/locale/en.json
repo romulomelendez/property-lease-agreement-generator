@@ -12,6 +12,8 @@
         "locator": "LOCATOR",
         "renter": "RENTER",
         "rental": "RENTAL",
+        "witness": "WITNESS",
+        "guarantor": "GUARANTOR",
         "startDate": "Start Date",
         "endDate": "End Date",
         "rentalAmount": "Rental Amount",

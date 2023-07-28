@@ -1,3 +1,5 @@
+import { useTranslation } from "react-i18next"
+
 import { ActionButton } from "../ActionButton"
 import { FormInput } from "../FormInput"
 import { FormTitle } from "../FormTitle"
@@ -6,26 +8,27 @@ import { WitnessContainer, InputContainer, GuarantorContainer, BtnContainer } fr
 
 export const WitnessGuarantorForm: React.FC = () => {
 
+    const { t } = useTranslation()
 
     return (
 
         <>
             <WitnessContainer>
-                <FormTitle text="Witness" />
+                <FormTitle text={t('witness')} />
                 <InputContainer>
-                    <FormInput type="text" placeholder="Name" />
-                    <FormInput type="number" placeholder="Social Security Number" />
+                    <FormInput type="text" placeholder={t('name')} />
+                    <FormInput type="number" placeholder={t('socialSecurityNumber')} />
                 </InputContainer>
             </WitnessContainer>
 
             <GuarantorContainer>
-                <FormTitle text="Guarantor" />
-                <FormInput type="text" placeholder="Name" />
+                <FormTitle text={t('guarantor')} />
+                <FormInput type="text" placeholder={t('name')} />
             </GuarantorContainer>
 
             <BtnContainer>
-                <ActionButton text="Previous" />
-                <ActionButton text="Next" />
+                <ActionButton text={t('previous')} />
+                <ActionButton text={t('next')} />
             </BtnContainer>
         </>
 
