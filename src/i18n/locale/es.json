@@ -21,6 +21,7 @@
     "name": "Nombre",
     "socialSecurityNumber": "Número de Seguro Social",
     "identityCardNumber": "Número de Tarjeta de Identidad",
-    "address": "Dirección"
+    "address": "Dirección",
+    "note": "Nota: Es necesario dar un pago inicial del 50% del importe para formalizar la reserva. Para más información consultar con el propietario."
   }
 }

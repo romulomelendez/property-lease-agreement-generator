@@ -21,6 +21,7 @@
         "name": "Nom",
         "socialSecurityNumber": "Numéro de Sécurité Sociale",
         "identityCardNumber": "Numéro de Carte D'identité",
-        "address": "Adresse"
+        "address": "Adresse",
+        "note": "Remarque : Il est nécessaire de verser un acompte de 50 % du montant pour finaliser la réservation. Pour plus d'informations consulter le propriétaire."
     }
 }
