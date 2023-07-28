@@ -4,7 +4,7 @@ import { ActionButton } from "../ActionButton"
 import { FormInput } from "../FormInput"
 import { FormTitle } from "../FormTitle"
 
-import { WitnessContainer, InputContainer, GuarantorContainer, BtnContainer } from './styles'
+import { WitnessContainer, InputContainer, GuarantorContainer, BtnContainer, Note } from './styles'
 
 export const WitnessGuarantorForm: React.FC = () => {
 
@@ -30,6 +30,8 @@ export const WitnessGuarantorForm: React.FC = () => {
                 <ActionButton text={t('previous')} />
                 <ActionButton text={t('next')} />
             </BtnContainer>
+
+            <Note>{t('note')}</Note>
         </>
 
     )

@@ -6,6 +6,7 @@ export const WitnessContainer = styled.section `
     grid-template-rows: repeat(2, max-content);
     justify-items: flex-start;
     gap: 10px;
+    width: 100%;
 `
 
 export const InputContainer = styled(WitnessContainer) `
@@ -26,4 +27,16 @@ export const BtnContainer = styled(WitnessContainer) `
     justify-content: space-between;
     column-gap: 15px;
     width: 100%;
+`
+
+export const Note = styled.h6 `
+
+    width: 200px;
+    font-size: 8pt;
+    font-family: 'REM', sans-serif;
+    color: #a30808;
+
+    @media (min-width: 550px) {
+        width: 320px;
+    }
 `
