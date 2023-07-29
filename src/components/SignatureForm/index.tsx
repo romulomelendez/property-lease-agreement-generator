@@ -5,6 +5,9 @@ import { FaFileSignature } from 'react-icons/fa'
 import { Button, Stack, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import { useTranslation } from 'react-i18next'
 
+import { DrawSignature } from '../DrawSignature'
+import { TypeSignature } from '../TypeSignature'
+
 export const SignatureForm: React.FC = () => {
 
     const { t } = useTranslation()
@@ -17,17 +20,21 @@ export const SignatureForm: React.FC = () => {
         <>
             {
                 isOpenSignatureTab ? (
-                    <Tabs variant='soft-rounded' colorScheme='blue' >
-                        <TabList display='flex' justifyContent='space-around' w={[190, 300, 350, 360, 500]}>
-                            <Tab>{t('signaturePadTab')}</Tab>
-                            <Tab>{t('signatureTypeTab')}</Tab>
+                    <Tabs variant='soft-rounded' colorScheme='blue'>
+                        <TabList display='flex' justifyContent='space-around' mb="1rem" w={[190, 300, 350, 360, 500]}>
+                            <Tab w={['50%']} fontSize={{ base: '14px', md: '17px', lg: '20px' }}>
+                                {t('signaturePadTab')}
+                            </Tab>
+                            <Tab w={['50%']} fontSize={{ base: '14px', md: '17px', lg: '20px' }}>
+                                {t('signatureTypeTab')}
+                            </Tab>
                         </TabList>
                         <TabPanels>
                             <TabPanel>
-                                <p>one!</p>
+                                <DrawSignature />
                             </TabPanel>
                             <TabPanel>
-                                <p>two!</p>
+                                <TypeSignature />
                             </TabPanel>
                         </TabPanels>
                     </Tabs>

@@ -10,5 +10,4 @@ export const Input = styled.input `
     outline: none;
     width: 100%;
     padding: 10px;
-
 `
