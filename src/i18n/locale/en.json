@@ -22,6 +22,10 @@
         "socialSecurityNumber": "Social Security Number",
         "identityCardNumber": "Identity Card Number",
         "address": "Address",
-        "note": "Note: It is necessary to give a down payment of 50% of the amount to complete the reservation. For more information consult the owner."
+        "note": "Note: It is necessary to give a down payment of 50% of the amount to complete the reservation. For more information consult the owner.",
+        "addSignature": "Add Signature",
+        "skip": "Skip",
+        "signaturePadTab": "Draw Signature",
+        "signatureTypeTab": "Type Signature"
     }
 }

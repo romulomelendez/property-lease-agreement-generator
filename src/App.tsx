@@ -5,8 +5,10 @@ import { Home } from './pages/Home'
 import { GlobalStyle } from './GlobalStyle'
 
 export const App: React.FC = () => (
-  <ChakraProvider>
-    <GlobalStyle />
-    <Home />
-  </ChakraProvider>
+  <>  
+    <ChakraProvider>
+      <GlobalStyle />
+      <Home />
+    </ChakraProvider>
+  </>
 )
