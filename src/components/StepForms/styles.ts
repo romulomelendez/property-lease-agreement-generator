@@ -13,5 +13,4 @@ export const Form = styled.form `
     border-radius: 4px;
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-
 `

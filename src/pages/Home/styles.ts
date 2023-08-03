@@ -24,6 +24,7 @@ export const GetStartedContainer = styled.div `
     height: 100%;
     width: 100%;
     background-color: yellow;
+    overflow: auto;
 
     @media (min-width: 362px) {
         padding: 30px;
