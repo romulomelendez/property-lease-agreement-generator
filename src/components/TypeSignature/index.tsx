@@ -39,7 +39,7 @@ export const TypeSignature: React.FC = () => {
         </FontStyleContainer>
 
         <BtnContainer>
-            <ActionButton text={t('cancel')} />
+            <ActionButton text={t('cancelSignature')} />
             <ActionButton text={t('createPdf')} />
         </BtnContainer>
     </Container>

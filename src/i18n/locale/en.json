@@ -26,6 +26,12 @@
         "addSignature": "Add Signature",
         "skip": "Skip",
         "signaturePadTab": "Draw Signature",
-        "signatureTypeTab": "Type Signature"
+        "signatureTypeTab": "Type Signature",
+        "typeYourFullName": "Type Your Full Name",
+        "createPdf": "Create PDF",
+        "alexBrushFont": "Alex Brush",
+        "dancingScriptFont": "Dancing Script",
+        "greatVibesFont": "Great Vibes",
+        "zeyadaFont": "Zeyada"
     }
 }
