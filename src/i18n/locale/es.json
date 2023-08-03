@@ -22,6 +22,19 @@
     "socialSecurityNumber": "Número de Seguro Social",
     "identityCardNumber": "Número de Tarjeta de Identidad",
     "address": "Dirección",
-    "note": "Nota: Es necesario dar un pago inicial del 50% del importe para formalizar la reserva. Para más información consultar con el propietario."
+    "note": "Nota: Es necesario dar un pago inicial del 50% del importe para formalizar la reserva. Para más información consultar con el propietario.",
+    "addSignature": "Agregar firma",
+    "skip": "Saltar",
+    "signaturePadTab": "Dibujar firma",
+    "signatureTypeTab": "Escriba la firma",
+    "cancelSignature": "Cancelar",
+    "clearSignature": "Borrar",
+    "saveSignature": "Guardar",
+    "typeYourFullName": "Escriba su nombre completo",
+    "createPdf": "Crea PDF",
+    "alexBrushFont": "Alex Brush",
+    "dancingScriptFont": "Dancing Script",
+    "greatVibesFont": "Great Vibes",
+    "zeyadaFont": "Zeyada"
   }
 }

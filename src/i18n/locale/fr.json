@@ -22,6 +22,19 @@
         "socialSecurityNumber": "Numéro de Sécurité Sociale",
         "identityCardNumber": "Numéro de Carte D'identité",
         "address": "Adresse",
-        "note": "Remarque : Il est nécessaire de verser un acompte de 50 % du montant pour finaliser la réservation. Pour plus d'informations consulter le propriétaire."
+        "note": "Remarque: Il est nécessaire de verser un acompte de 50 % du montant pour finaliser la réservation. Pour plus d'informations consulter le propriétaire.",
+        "addSignature": "Ajouter une signature",
+        "skip": "Sauter",
+        "signaturePadTab": "Dessiner une signature",
+        "signatureTypeTab": "Taper Signature",
+        "cancelSignature": "Annuler",
+        "clearSignature": "Clair",
+        "saveSignature": "Sauvegarder",
+        "typeYourFullName": "Tapez votre nom complet",
+        "createPdf": "Créer un PDF",
+        "alexBrushFont": "Alex Brush",
+        "dancingScriptFont": "Dancing Script",
+        "greatVibesFont": "Great Vibes",
+        "zeyadaFont": "Zeyada"
     }
 }

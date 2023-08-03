@@ -22,6 +22,19 @@
     "socialSecurityNumber": "CPF",
     "identityCardNumber": "Identidade",
     "address": "Endereço",
-    "note": "Obs: É necessário dar entrada de 50% do valor para finalizar a reserva. Para mais informações consulte o proprietário."
+    "note": "Obs: É necessário dar entrada de 50% do valor para finalizar a reserva. Para mais informações consulte o proprietário.",
+    "addSignature": "Adicionar Assinatura",
+    "skip": "Pular",
+    "signaturePadTab": "Desenhar Assinatura",
+    "signatureTypeTab": "Digitar Assinatura",
+    "cancelSignature": "Cancelar",
+    "clearSignature": "Limpar",
+    "saveSignature": "Salvar",
+    "typeYourFullName": "Digite seu nome completo",
+    "createPdf": "Criar PDF",
+    "alexBrushFont": "Alex Brush",
+    "dancingScriptFont": "Dancing Script",
+    "greatVibesFont": "Great Vibes",
+    "zeyadaFont": "Zeyada"
   }
 }
