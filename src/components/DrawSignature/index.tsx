@@ -3,7 +3,9 @@ import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import SignaturePad from 'react-signature-canvas'
 
-import { Container, BtnContainer, Cancel, Clear, Save } from './styles'
+import { ActionButton } from '../ActionButton'
+
+import { Container, BtnContainer } from './styles'
 import './signaturepad.css'
 
 export const DrawSignature: React. FC = () => {
@@ -24,6 +26,8 @@ export const DrawSignature: React. FC = () => {
     setBase64SignatureImg(signatureImage)
   }
 
+  const cancel = (): void => console.log('cancel')
+
   return (
 
     <Container>
@@ -31,9 +35,9 @@ export const DrawSignature: React. FC = () => {
       <SignaturePad ref={sigPad} penColor="#3f7ae0" canvasProps={{className: 'signaturepad'}} />
 
       <BtnContainer>
-        <Cancel type="button">{t('cancelSignature')}</Cancel>
-        <Clear type="button" onClick={clearSignature}>{t('clearSignature')}</Clear>
-        <Save type="button" onClick={saveSignature}>{t('saveSignature')}</Save>
+        <ActionButton text={t('cancelSignature')} color="darkred" onClick={cancel} />
+        <ActionButton text={t('clearSignature')} onClick={clearSignature} />
+        <ActionButton text={t('saveSignature')} color="darkgreen" onClick={saveSignature} />
       </BtnContainer>
     </Container>
       

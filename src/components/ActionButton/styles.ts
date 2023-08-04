@@ -1,5 +1,9 @@
 import styled from 'styled-components'
 
+type ActionBtnProps = {
+    color?: string
+}
+
 export const Button = styled.button `
     
     display: flex;
@@ -11,13 +15,20 @@ export const Button = styled.button `
     outline: none;
     border: none;
     border-radius: 4px;
-    background-color: #3f7ae0;
+    background-color: ${({ color }: ActionBtnProps) => color ? color : '#3f7ae0'};
     color: white;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 
     &:hover {
-        background-color: #3861a8;
+        background-color: ${({ color }: ActionBtnProps) => {
+            if( color === 'darkred')
+                return 'red'
+            else if( color === 'darkgreen')
+                return 'green'
+            else
+                return '#3861a8'
+        }};
     }
 
     @media (min-width: 550px) {
