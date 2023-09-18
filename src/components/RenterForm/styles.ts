@@ -21,14 +21,3 @@ export const SocialIdsContainer = styled(InputContainer) `
         grid-template-columns: auto auto;
     }
 `
-
-export const BtnContainer = styled.section `
-
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    column-gap: 10px;
-
-    @media (min-width: 550px) {
-
-    }
-`

@@ -14,3 +14,11 @@ export const Form = styled.form `
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 `
+
+export const BtnContainer = styled.section `
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+`

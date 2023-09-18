@@ -2,9 +2,8 @@ import { useTranslation } from "react-i18next"
 
 import { FormTitle } from '../FormTitle'
 import { FormInput } from '../FormInput'
-import { ActionButton } from '../ActionButton'
 
-import { InputContainer, BtnContainer, InputDate } from './styles'
+import { InputContainer, InputDate } from './styles'
 
 export const RentalForm: React.FC = () => {
 
@@ -21,11 +20,6 @@ export const RentalForm: React.FC = () => {
                 <FormInput type="number" placeholder={t('rentalAmount')} />
                 <InputDate type="date" placeholder={t('dueDate')} />
             </InputContainer>
-
-            <BtnContainer>
-                <ActionButton text={t('previous')} />
-                <ActionButton text={t('next')} />
-            </BtnContainer>
         </>
     )
 

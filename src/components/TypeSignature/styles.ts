@@ -35,16 +35,6 @@ export const FontStyleContainer = styled.div `
     }
 `
 
-export const BtnContainer = styled.section `
-
-    display: grid;
-    grid-template-columns: repeat(2, auto);
-    justify-items: center;
-    width: 100%;
-    column-gap: 5px;
-    margin-top: 10px;
-`
-
 const BaseFont = styled.input `
 
     border: 1px solid #cecece;

@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { PdfViewer } from '../../components/PdfViewer'
-import { PdfForm } from '../../components/PdfForm'
+import { StepForms } from '../../components/StepForms'
 import { DropdownMenu } from '../../components/DropdownMenu'
 
 import { Container, GetStartedContainer, ViewerContainer, Title, Subtitle, Button } from './styles'
@@ -28,7 +28,7 @@ export const Home = () => {
                             {t("createPdfButton")}
                         </Button> 
                     :
-                        <PdfForm />
+                        <StepForms />
                 }
 
             </GetStartedContainer>

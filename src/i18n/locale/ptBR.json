@@ -24,6 +24,7 @@
     "address": "Endereço",
     "note": "Obs: É necessário dar entrada de 50% do valor para finalizar a reserva. Para mais informações consulte o proprietário.",
     "addSignature": "Adicionar Assinatura",
+    "youWantToAddSignature": "Você quer adicionar uma assinatura?",
     "skip": "Pular",
     "signaturePadTab": "Desenhar Assinatura",
     "signatureTypeTab": "Digitar Assinatura",

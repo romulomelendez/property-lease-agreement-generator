@@ -27,10 +27,3 @@ export const InputDate = styled.input `
     height: 45px;
 
 `
-
-export const BtnContainer = styled.section `
-
-    display: flex;
-    justify-content: space-between;
-    column-gap: 15px;
-`

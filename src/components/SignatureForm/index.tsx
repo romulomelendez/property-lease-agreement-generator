@@ -7,6 +7,7 @@ import { useTranslation } from 'react-i18next'
 
 import { DrawSignature } from '../DrawSignature'
 import { TypeSignature } from '../TypeSignature'
+import { FormTitle } from '../FormTitle'
 
 export const SignatureForm: React.FC = () => {
 
@@ -18,6 +19,7 @@ export const SignatureForm: React.FC = () => {
     return (
         
         <>
+            <FormTitle text={t("youWantToAddSignature")} />
             {
                 isOpenSignatureTab ? (
                     <Tabs variant='soft-rounded' colorScheme='blue'>

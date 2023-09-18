@@ -21,14 +21,6 @@ export const GuarantorContainer = styled(WitnessContainer) `
     width: 100%;
 `
 
-export const BtnContainer = styled(WitnessContainer) `
-
-    display: flex;
-    justify-content: space-between;
-    column-gap: 15px;
-    width: 100%;
-`
-
 export const Note = styled.h6 `
 
     width: 200px;

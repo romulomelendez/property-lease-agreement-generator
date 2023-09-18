@@ -22,8 +22,8 @@ export const Button = styled.button `
 
     &:hover {
         background-color: ${({ color }: ActionBtnProps) => {
-            if( color === 'darkred')
-                return 'red'
+            if( color === '#941d15')
+                return '#701009'
             else if( color === 'darkgreen')
                 return 'green'
             else

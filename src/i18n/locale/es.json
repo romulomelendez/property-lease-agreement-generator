@@ -24,6 +24,7 @@
     "address": "Dirección",
     "note": "Nota: Es necesario dar un pago inicial del 50% del importe para formalizar la reserva. Para más información consultar con el propietario.",
     "addSignature": "Agregar firma",
+    "youWantToAddSignature": "¿Quieres añadir una firma?",
     "skip": "Saltar",
     "signaturePadTab": "Dibujar firma",
     "signatureTypeTab": "Escriba la firma",

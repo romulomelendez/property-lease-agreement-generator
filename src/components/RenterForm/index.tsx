@@ -1,36 +1,28 @@
-import { useTranslation } from 'react-i18next'
+import { useTranslation } from "react-i18next"
 
-import { FormTitle } from '../FormTitle'
-import { FormInput } from '../FormInput'
-import { ActionButton } from '../ActionButton'
+import { FormInput } from "../FormInput"
+import { FormTitle } from "../FormTitle"
 
-import { InputContainer, SocialIdsContainer, BtnContainer } from './styles'
+import { InputContainer, SocialIdsContainer } from "./styles"
 
 export const RenterForm: React.FC = () => {
+  
+  const { t } = useTranslation()
 
-    const { t } = useTranslation()
+  return (
+    <>
+      <FormTitle text={t("renter")} />
 
-    return (
+      <InputContainer>
+        <FormInput type="text" placeholder={t("name")} />
 
-        <>
-            <FormTitle text={t('renter')} />
+        <SocialIdsContainer>
+          <FormInput type="number" placeholder={t("socialSecurityNumber")} />
+          <FormInput type="number" placeholder={t("identityCardNumber")} />
+        </SocialIdsContainer>
 
-            <InputContainer>
-                <FormInput type="text" placeholder={t('name')} />
-
-                <SocialIdsContainer>
-                    <FormInput type="number" placeholder={t('socialSecurityNumber')} />
-                    <FormInput type="number" placeholder={t('identityCardNumber')} />
-                </SocialIdsContainer>
-
-                <FormInput type="text" placeholder={t('address')} />
-            </InputContainer>
-      
-            <BtnContainer>
-                <ActionButton text={t('previous')} />
-                <ActionButton text={t('next')} />
-            </BtnContainer>
-        </>
-
+        <FormInput type="text" placeholder={t("address")} />
+      </InputContainer>
+    </>
   )
 }

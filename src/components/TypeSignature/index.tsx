@@ -2,12 +2,9 @@ import { ChangeEvent, useState } from 'react'
 
 import { useTranslation } from 'react-i18next'
 
-import { ActionButton } from '../ActionButton'
-
 import {
     Container,
     FullNameInput,
-    BtnContainer,
     AlexBrushFont,
     DancingScriptFont,
     FontStyleContainer,
@@ -37,11 +34,6 @@ export const TypeSignature: React.FC = () => {
             <GreatVibesFont type="text" value={fullName} placeholder={t('greatVibesFont')} onClick={() => handleSignatureFontSelected("Great Vibes")} readOnly />
             <ZeyadaFont type="text" value={fullName} placeholder={t('zeyadaFont')} onClick={() => handleSignatureFontSelected("Zeyada")} readOnly />
         </FontStyleContainer>
-
-        <BtnContainer>
-            <ActionButton text={t('cancelSignature')} color="darkred" />
-            <ActionButton text={t('createPdf')} />
-        </BtnContainer>
     </Container>
   )
 }

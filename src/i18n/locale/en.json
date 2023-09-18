@@ -24,6 +24,7 @@
         "address": "Address",
         "note": "Note: It is necessary to give a down payment of 50% of the amount to complete the reservation. For more information consult the owner.",
         "addSignature": "Add Signature",
+        "youWantToAddSignature": "You want to add a signature?",
         "skip": "Skip",
         "signaturePadTab": "Draw Signature",
         "signatureTypeTab": "Type Signature",

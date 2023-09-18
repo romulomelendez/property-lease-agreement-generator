@@ -24,6 +24,7 @@
         "address": "Adresse",
         "note": "Remarque: Il est nécessaire de verser un acompte de 50 % du montant pour finaliser la réservation. Pour plus d'informations consulter le propriétaire.",
         "addSignature": "Ajouter une signature",
+        "youWantToAddSignature": "Voulez-vous ajouter une signature?",
         "skip": "Sauter",
         "signaturePadTab": "Dessiner une signature",
         "signatureTypeTab": "Taper Signature",
