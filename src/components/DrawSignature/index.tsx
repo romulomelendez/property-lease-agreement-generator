@@ -26,16 +26,12 @@ export const DrawSignature: React. FC = () => {
     setBase64SignatureImg(signatureImage)
   }
 
-  const cancel = (): void => console.log('cancel')
-
   return (
 
     <Container>
-     
       <SignaturePad ref={sigPad} penColor="#3f7ae0" canvasProps={{className: 'signaturepad'}} />
 
       <BtnContainer>
-        <ActionButton text={t('cancelSignature')} color="darkred" onClick={cancel} />
         <ActionButton text={t('clearSignature')} onClick={clearSignature} />
         <ActionButton text={t('saveSignature')} color="darkgreen" onClick={saveSignature} />
       </BtnContainer>
