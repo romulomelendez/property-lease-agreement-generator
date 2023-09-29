@@ -2,16 +2,34 @@ import { useState } from 'react'
 
 import { BsFillSkipEndFill } from 'react-icons/bs'
 import { FaFileSignature } from 'react-icons/fa'
-import { Button, Stack, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import {
+    Button,
+    Stack,
+    Tabs,
+    TabList,
+    TabPanels,
+    Tab,
+    TabPanel,
+    useDisclosure,
+    Modal,
+    ModalOverlay,
+    ModalContent,
+    ModalHeader,
+    ModalFooter,
+    ModalCloseButton,
+ } from '@chakra-ui/react'
+
 import { useTranslation } from 'react-i18next'
 
 import { DrawSignature } from '../DrawSignature'
 import { TypeSignature } from '../TypeSignature'
 import { FormTitle } from '../FormTitle'
+// import { ConfirmationModal } from '../ConfirmationModal'
 
 export const SignatureForm: React.FC = () => {
 
     const { t } = useTranslation()
+    const { onOpen, isOpen, onClose } = useDisclosure()
     const [isOpenSignatureTab, setIsOpenSignatureTab] = useState(false)
 
     const handleSignatureTab = () => setIsOpenSignatureTab(!isOpenSignatureTab)
@@ -45,12 +63,30 @@ export const SignatureForm: React.FC = () => {
                         <Button leftIcon={<FaFileSignature />} colorScheme='blue' variant='solid' onClick={handleSignatureTab}>
                             { t('addSignature') }
                         </Button>
-                        <Button rightIcon={<BsFillSkipEndFill />} colorScheme='blue' variant='outline'>
+                        <Button rightIcon={<BsFillSkipEndFill />} colorScheme='blue' variant='outline' onClick={onOpen}>
                             { t('skip') }
                         </Button>
                     </Stack>
                 )
             }
+            {/* Confirmation Modal */}
+            <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
+                <ModalOverlay />
+                <ModalContent>
+                    <ModalHeader>
+                        { t('save&createPDF') }
+                    </ModalHeader>
+                    <ModalCloseButton />
+                    <ModalFooter>
+                        <Button colorScheme='green' mr={3}>
+                            { t('save') }
+                        </Button>
+                        <Button onClick={onClose} colorScheme='red'>
+                            { t('cancel') }
+                        </Button>
+                    </ModalFooter>
+                </ModalContent>
+            </Modal>
         </>
 
     )
