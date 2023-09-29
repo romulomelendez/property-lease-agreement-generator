@@ -70,7 +70,7 @@ export const SignatureForm: React.FC = () => {
                 )
             }
             {/* Confirmation Modal */}
-            <Modal closeOnOverlayClick={false} isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpen} onClose={onClose}>
                 <ModalOverlay />
                 <ModalContent>
                     <ModalHeader>
