@@ -1,22 +1,25 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from "next"
+import { Whisper } from "next/font/google"
+import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] });
+const whisper = Whisper({
+  weight: ["400"],
+  subsets: ["latin"]
+})
 
 export const metadata: Metadata = {
   title: "Property Lease Agreement Generator",
   description: "",
-};
+}
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: React.ReactNode
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className} suppressHydrationWarning={true}>{children}</body>
+      <body className={whisper.className} suppressHydrationWarning={true}>{children}</body>
     </html>
-  );
+  )
 }
