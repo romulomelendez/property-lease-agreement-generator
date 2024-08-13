@@ -2,7 +2,7 @@
 
 import { ReactElement, useState } from "react"
 
-import { PdfViewer, Locator, Renter, Rental1, Rental2 } from "@/components"
+import { PdfViewer, Locator, Renter, Rental1, Rental2, WitnessAndGuarantor } from "@/components"
 
 const Home: React.FC = () => {
 
@@ -11,6 +11,7 @@ const Home: React.FC = () => {
     <Renter key="renter-form" />,
     <Rental1 key="rental1-form" />,
     <Rental2 key="rental2-form" />,
+    <WitnessAndGuarantor key="WitnessAndGuarantor-form" />,
   ])
   const [formStep, setFormStep] = useState<number>(0)
 
@@ -28,18 +29,18 @@ const Home: React.FC = () => {
             { forms[formStep] }
             <div className="flex gap-2 w-full items-center justify-between">
               <button
-              type="button"
-              className="bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
-              onClick={previous}
-              disabled={formStep === 0 && true}
+               type="button"
+               className="bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
+               onClick={previous}
+               disabled={formStep === 0 && true}
               >
                 Previous
               </button>
               <button
-              type="button"
-              className="w-24 bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
-              onClick={next}
-              disabled={formStep === (forms.length - 1) && true}
+               type="button"
+               className="w-24 bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
+               onClick={next}
+               disabled={formStep === (forms.length - 1) && true}
               >
                 Next
               </button>
