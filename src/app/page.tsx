@@ -2,12 +2,13 @@
 
 import { ReactElement, useState } from "react"
 
-import { PdfViewer, Locator } from "@/components"
+import { PdfViewer, Locator, Renter } from "@/components"
 
 const Home: React.FC = () => {
 
   const [forms, setForms] = useState<ReactElement[]>([
     <Locator key="locator-form" />,
+    <Renter key="renter-form" />,
   ])
   const [formSelected, setFormSelected] = useState<number>(0)
 
@@ -26,7 +27,7 @@ const Home: React.FC = () => {
             <div className="flex gap-2 w-full items-center justify-between">
               <button
               type="button"
-              className="bg-blue-800 hover:bg-blue-700 text-white font-bold p-4 text-3xl"
+              className="bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
               onClick={previous}
               disabled={formSelected === 0 && true}
               >
@@ -34,7 +35,7 @@ const Home: React.FC = () => {
               </button>
               <button
               type="button"
-              className="w-24 bg-blue-800 hover:bg-blue-700 text-white font-bold p-4 text-3xl"
+              className="w-24 bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
               onClick={next}
               disabled={formSelected === 2 && true}
               >

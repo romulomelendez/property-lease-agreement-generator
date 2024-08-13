@@ -1,6 +1,6 @@
-export const Locator: React.FC = () => (
+export const Renter: React.FC = () => (
   <div className="flex flex-col gap-4 w-full h-max">
-    <h1 className="font-bold font-sans text-center text-3xl">LOCATOR</h1>
+    <h1 className="font-bold font-sans text-center text-3xl">RENTER</h1>
     <input
       type="text"
       className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
