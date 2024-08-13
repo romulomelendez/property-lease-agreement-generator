@@ -1,6 +1,6 @@
 export const Renter: React.FC = () => (
   <div className="flex flex-col gap-4 w-full h-max">
-    <h1 className="font-bold font-sans text-center text-3xl">RENTER</h1>
+    <span className="font-bold font-sans text-center text-3xl">RENTER</span>
     <input
       type="text"
       className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
@@ -19,4 +19,4 @@ export const Renter: React.FC = () => (
       />
     </section>
   </div>
-)
+);
