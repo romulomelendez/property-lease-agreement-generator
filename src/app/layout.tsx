@@ -1,8 +1,8 @@
 import type { Metadata } from "next"
-import { Whisper } from "next/font/google"
+import { Caveat } from "next/font/google"
 import "./globals.css"
 
-const whisper = Whisper({
+const caveat = Caveat({
   weight: ["400"],
   subsets: ["latin"]
 })
@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={whisper.className} suppressHydrationWarning={true}>{children}</body>
+      <body className={caveat.className} suppressHydrationWarning={true}>{children}</body>
     </html>
   )
 }
