@@ -2,7 +2,9 @@
 
 import { ReactElement, useState } from "react"
 
-import { Locator, PdfViewer, Rental1, Rental2, Renter, WitnessAndGuarantor } from "@/components"
+import { MdOutlineNavigateNext, MdOutlineNavigateBefore  } from "react-icons/md"
+
+import { Locator, PdfViewer, Rental1, Rental2, Renter, WitnessAndGuarantor, Signature } from "@/components"
 
 const Home: React.FC = () => {
 
@@ -11,7 +13,8 @@ const Home: React.FC = () => {
     <Renter key="renter-form" />,
     <Rental1 key="rental1-form" />,
     <Rental2 key="rental2-form" />,
-    <WitnessAndGuarantor key="WitnessAndGuarantor-form" />,
+    <WitnessAndGuarantor key="witnessAndGuarantor-form" />,
+    <Signature key="signature-form" />,
   ])
   const [formStep, setFormStep] = useState<number>(0)
 
@@ -30,19 +33,19 @@ const Home: React.FC = () => {
             <div className="flex gap-2 w-full items-center justify-between">
               <button
                type="button"
-               className="bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
+               className="rounded-full bg-blue-800 hover:bg-blue-700 p-2 text-white text-2xl"
                onClick={previous}
                disabled={formStep === 0 && true}
               >
-                Previous
+                <MdOutlineNavigateBefore />
               </button>
               <button
                type="button"
-               className="w-24 bg-blue-800 hover:bg-blue-700 text-white font-bold font-sans p-4 text-xl"
+               className="rounded-full bg-blue-800 hover:bg-blue-700 p-2 text-white text-2xl"
                onClick={next}
                disabled={formStep === (forms.length - 1) && true}
               >
-                Next
+                <MdOutlineNavigateNext />
               </button>
             </div>
           </div>

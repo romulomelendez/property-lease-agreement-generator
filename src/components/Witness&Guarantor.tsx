@@ -21,7 +21,8 @@ export const WitnessAndGuarantor: React.FC = () => {
                 : <Guarantor />
             }
 
-            <span className="font-bold font-sans text-center text-sm md:text-md text-red-500">
+            <span
+              className="font-bold font-sans text-center text-sm md:text-md text-red-500">
                 Note: It&apos;s necessary to give a down payment of 50% of the amount to complete the reservation. For more information, consult the owner. 
             </span>
         </div>
