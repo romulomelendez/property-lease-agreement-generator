@@ -26,4 +26,4 @@ export const Locator: React.FC = () => (
       placeholder="Property Address"
     />
   </div>
-);
+)
