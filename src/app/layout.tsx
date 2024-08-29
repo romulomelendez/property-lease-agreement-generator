@@ -1,5 +1,7 @@
 import type { Metadata } from "next"
+
 import { Caveat } from "next/font/google"
+
 import "./globals.css"
 
 const caveat = Caveat({
@@ -19,7 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={caveat.className} suppressHydrationWarning={true}>{children}</body>
+      <body
+       className={caveat.className} 
+       suppressHydrationWarning={true}
+      >
+        {children}
+      </body>
     </html>
   )
 }
