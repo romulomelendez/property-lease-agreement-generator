@@ -2,7 +2,6 @@
 
 import { ReactElement, useState } from "react"
 
-import { z } from "zod"
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { MdOutlineNavigateNext, MdOutlineNavigateBefore } from "react-icons/md"
@@ -17,39 +16,8 @@ import {
   WitnessAndGuarantor,
   Signature
 } from "@/components"
-
-const rentalSchema = z.object({
-  locator: z.object({
-    name: z.string(),
-    socialSecurityNumber: z.coerce.number(),
-    identityCardNumber: z.coerce.number()
-  }),
-  renter: z.object({
-    name: z.string(),
-    socialSecurityNumber: z.coerce.number(),
-    identityCardNumber: z.coerce.number()
-  }),
-  property: z.object({
-    address: z.string()
-  }),
-  rental: z.object({
-    startDate: z.string(),
-    endDate: z.string(),
-    daysRented: z.coerce.number() || z.null(),
-    rentalAmount: z.coerce.number(),
-    rentDueDate: z.coerce.number() || z.null()
-  }),
-  witness: z.object({
-    name: z.string(),
-    socialSecurityNumber: z.coerce.number()
-  }) || z.null(),
-  guarantor: z.object({
-    name: z.string()
-  }) || z.null(),
-  signature: z.string() || z.null()
-})
-
-type RentalFormProps = z.infer<typeof rentalSchema>
+import { RentalSchema } from "@/lib/Schemas"
+import { RentalFormProps } from "@/@types"
 
 const Home: React.FC = () => {
 
@@ -67,7 +35,7 @@ const Home: React.FC = () => {
   const previous = (): void => setFormStep(formStep - 1)
   const onSubmit: SubmitHandler<RentalFormProps> = (formData): void => console.log("DATA >>> ", formData)
 
-  const methods = useForm<RentalFormProps>({ resolver: zodResolver(rentalSchema) })
+  const methods = useForm<RentalFormProps>({ resolver: zodResolver(RentalSchema) })
 
   return (
     <main className="flex flex-col md:flex-row bg-yellow-500">
