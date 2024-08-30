@@ -57,7 +57,7 @@ const Home: React.FC = () => {
               <div className="flex gap-2 w-full items-center justify-between">
                 <button
                  type="button"
-                 className="rounded-full bg-blue-800 hover:bg-blue-700 p-2 text-white text-2xl"
+                 className={`rounded-full ${formStep === 0 ? "bg-slate-800 hover:bg-slate-700" : "bg-blue-800 hover:bg-blue-700"}  p-2 text-white text-2xl`}
                  onClick={previous}
                  disabled={formStep === 0 && true}
                 >
