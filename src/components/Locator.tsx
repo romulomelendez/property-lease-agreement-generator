@@ -29,12 +29,6 @@ export const Locator: React.FC = () => {
           {...register("locator.identityCardNumber")}
         />
       </section>
-      <input
-        type="text"
-        className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
-        placeholder="Property Address"
-        {...register("property.address")}
-      />
     </div>
   )
 }

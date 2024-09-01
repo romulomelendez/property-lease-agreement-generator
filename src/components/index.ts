@@ -1,5 +1,6 @@
 export * from "./PdfViewer"
-export * from "./LocatorForm"
+export * from "./Locator"
+export * from "./Property"
 export * from "./Renter"
 export * from "./Rental1"
 export * from "./Rental2"
