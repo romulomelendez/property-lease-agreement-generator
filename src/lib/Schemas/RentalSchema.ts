@@ -12,7 +12,14 @@ export const RentalSchema = z.object({
       identityCardNumber: z.coerce.number()
     }),
     property: z.object({
-      address: z.string()
+      address: z.object({
+        street: z.string(),
+        number: z.coerce.number() || z.null(),
+        zipCode: z.string() || z.coerce.number(),
+        city: z.string(),
+        state: z.string(),
+        complement: z.string() || z.null()
+      })
     }),
     rental: z.object({
       startDate: z.string(),
