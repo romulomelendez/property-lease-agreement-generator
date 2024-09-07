@@ -12,19 +12,19 @@ export const Rental2: React.FC = () => {
             <div className="flex flex-col gap-4">
                 <input
                   type="number"
-                  className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+                  className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
                   placeholder="Days Rented(optional)"
                   {...register("rental.daysRented")}
                 />
                 <input
                   type="number"
-                  className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+                  className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
                   placeholder="Rental Amount"
                   {...register("rental.rentalAmount")}
                 />
                 <input
                   type="number"
-                  className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+                  className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
                   placeholder="Rent Due Date"
                   {...register("rental.rentDueDate")}
                 />

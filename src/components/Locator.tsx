@@ -18,13 +18,13 @@ export const Locator: React.FC = () => {
       <section className="flex flex-col md:flex-row justify-evenly gap-4">
         <input
           type="number"
-          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
           placeholder="Social Secutiry Number"
           {...register("locator.socialSecurityNumber")}
         />
         <input
           type="number"
-          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
           placeholder="Identity Card Number"
           {...register("locator.identityCardNumber")}
         />

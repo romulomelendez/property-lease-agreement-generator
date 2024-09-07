@@ -46,7 +46,7 @@ export const Property: React.FC = () => {
       <div className="flex">
         <input
           type="number"
-          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
           placeholder="Zip Code"
           {...register("property.address.zipCode")}
         />
@@ -68,7 +68,7 @@ export const Property: React.FC = () => {
         />
         <input
           type="number"
-          className="font-sans p-2 w-20 h-max border border-blue-500 text-center text-2xl text-cyan-600 outline-none disabled:border-slate-300"
+          className="font-sans p-2 w-14 sm:w-20 h-max border border-blue-500 text-center text-2xl text-cyan-600 outline-none disabled:border-slate-300 [&::-webkit-inner-spin-button]:appearance-none"
           placeholder={!hasNumber ? "Number": "---------------"}
           {...register("property.address.number")}
           disabled={hasNumber}

@@ -14,7 +14,7 @@ export const Witness: React.FC = () => {
             />
             <input 
               type="number"
-              className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none"
+              className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none [&::-webkit-inner-spin-button]:appearance-none"
               placeholder="Social Security Number"
               {...register("witness.socialSecurityNumber")}
             />
