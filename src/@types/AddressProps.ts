@@ -1,6 +1,6 @@
 export type AddressProps = {
     street: string,
-    zipCode: string,
+    district: string,
     city: string,
     state: string
 }

@@ -16,6 +16,7 @@ export const RentalSchema = z.object({
         street: z.string(),
         number: z.coerce.number() || z.null(),
         zipCode: z.string() || z.coerce.number(),
+        district: z.string(),
         city: z.string(),
         state: z.string(),
         complement: z.string() || z.null()
@@ -28,12 +29,12 @@ export const RentalSchema = z.object({
       rentalAmount: z.coerce.number(),
       rentDueDate: z.coerce.number() || z.null()
     }),
-    witness: z.object({
-      name: z.string(),
-      socialSecurityNumber: z.coerce.number()
-    }) || z.null(),
-    guarantor: z.object({
-      name: z.string()
-    }) || z.null(),
-    signature: z.string() || z.null()
+    // witness: z.object({
+    //   name: z.string(),
+    //   socialSecurityNumber: z.coerce.number()
+    // }) || z.null(),
+    // guarantor: z.object({
+    //   name: z.string()
+    // }) || z.null(),
+    // signature: z.string() || z.null()
 })
