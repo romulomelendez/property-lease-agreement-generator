@@ -11,32 +11,42 @@ export const Property: React.FC = () => {
   const [zipCodeToSearchAddress, setZipCodeToSearchAddress] = useState<string>()
   const [hasNumber, setHasNumber] = useState<boolean>(false)
 
-  const { register, watch, setValue } = useFormContext()
-
-  const fieldsWatched: string[] = watch([
-    "property.address.number",
-    "property.address.complement",
-    "property.address.street",
-  ])
-
-  // useEffect(() => {
-  //   return () => {
-  //     setValue(fieldsWatched[0], "")
-  //     setValue(fieldsWatched[1], "")
-  //   }
-  // }, [])
+  const { register, setValue } = useFormContext()
 
   useEffect(() => {
 
+    const userAddressLocalStorage = getAddressOnLocalStorage("userAddress")
+
     const autoFillAddress = (field: string, value: string | undefined | null): void => setValue(field, value, { shouldTouch: true })
 
-    // fill address fields automatic
-    autoFillAddress("property.address.street", userAddress?.street)
-    autoFillAddress("property.address.city", userAddress?.city)
-    autoFillAddress("property.address.state", userAddress?.state)
-    autoFillAddress("property.address.district", userAddress?.district)
+    if(userAddress) {
+
+      // fill address fields automatic
+      autoFillAddress("property.address.street", userAddress?.street)
+      autoFillAddress("property.address.district", userAddress?.district)
+      autoFillAddress("property.address.city", userAddress?.city)
+      autoFillAddress("property.address.state", userAddress?.state)
+      
+      setAddressOnLocalStorage("userAddress", JSON.stringify(userAddress))
+      return
+    } else if(userAddressLocalStorage) {
+
+      const { street, district, city, state }: AddressProps = JSON.parse(userAddressLocalStorage)
+
+      // re-fill address fields automatic
+      autoFillAddress("property.address.street", street)
+      autoFillAddress("property.address.district", district)
+      autoFillAddress("property.address.city", city)
+      autoFillAddress("property.address.state", state)
+      return
+    }
+    
   }, [setValue, userAddress])
 
+  const getAddressOnLocalStorage = (key: string): string | null => localStorage.getItem(key)
+
+  const setAddressOnLocalStorage = (key: string, value: string): void => localStorage.setItem(key, value)
+  
   const getAddress = async (): Promise<AddressResponseApiProps> => {
 
     // const addressRespondeData: AddressResponseApiProps = await (
@@ -144,7 +154,6 @@ export const Property: React.FC = () => {
         {...register("property.address.complement")}
         disabled={userAddress ? false : true}
       />
-      { JSON.stringify(userAddress) }
     </section>
   )
 }
