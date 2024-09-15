@@ -1,0 +1,1 @@
+export const getOnLocalStorage = (key: string): string | null => localStorage.getItem(key)

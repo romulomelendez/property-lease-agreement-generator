@@ -4,10 +4,13 @@ import { useFormContext } from "react-hook-form"
 import { FiSearch } from "react-icons/fi"
 
 import { AddressProps, AddressResponseApiProps } from "@/@types"
+import { getOnLocalStorage, setOnLocalStorage } from "@/utils"
 
 export const Property: React.FC = () => {
 
   const [userAddress, setUserAddress] = useState<AddressProps>()
+  const [, setOptionalAddressNumber] = useState<number>()
+  const [, setOptionalAddressComplement] = useState<string>()
   const [zipCodeToSearchAddress, setZipCodeToSearchAddress] = useState<string>()
   const [hasNumber, setHasNumber] = useState<boolean>(false)
 
@@ -15,9 +18,11 @@ export const Property: React.FC = () => {
 
   useEffect(() => {
 
-    const userAddressLocalStorage = getAddressOnLocalStorage("userAddress")
+    const userAddressLocalStorage = getOnLocalStorage("userAddress")
+    const optionalAddressNumberLocalStorage = getOnLocalStorage("addressNumber")
+    const optionalAddressComplementLocalStorage = getOnLocalStorage("addressComplement")
 
-    const autoFillAddress = (field: string, value: string | undefined | null): void => setValue(field, value, { shouldTouch: true })
+    const autoFillAddress = (field: string, value: string | number | undefined): void => setValue(field, value)
 
     if(userAddress) {
 
@@ -27,25 +32,42 @@ export const Property: React.FC = () => {
       autoFillAddress("property.address.city", userAddress?.city)
       autoFillAddress("property.address.state", userAddress?.state)
       
-      setAddressOnLocalStorage("userAddress", JSON.stringify(userAddress))
+      setOnLocalStorage("userAddress", JSON.stringify(userAddress))
       return
     } else if(userAddressLocalStorage) {
 
-      const { street, district, city, state }: AddressProps = JSON.parse(userAddressLocalStorage)
+      const { street, district, city, state, zipcode }: AddressProps = JSON.parse(userAddressLocalStorage)
 
-      // re-fill address fields automatic
+      // set on state
+      setUserAddress({
+        zipcode,
+        street,
+        district,
+        city,
+        state
+      })
+
+      // re-fill address fields automatic from local storage
+      autoFillAddress("property.address.zipCode", zipcode)
       autoFillAddress("property.address.street", street)
       autoFillAddress("property.address.district", district)
       autoFillAddress("property.address.city", city)
       autoFillAddress("property.address.state", state)
-      return
+
+      if(optionalAddressNumberLocalStorage) {
+
+        setHasNumber(true)
+        setOptionalAddressNumber(+optionalAddressNumberLocalStorage)
+        autoFillAddress("property.address.number", +optionalAddressNumberLocalStorage)
+      }
+
+      if(optionalAddressComplementLocalStorage) {
+
+        setOptionalAddressComplement(optionalAddressComplementLocalStorage)
+        autoFillAddress("property.address.complement", optionalAddressComplementLocalStorage)
+      }
     }
-    
   }, [setValue, userAddress])
-
-  const getAddressOnLocalStorage = (key: string): string | null => localStorage.getItem(key)
-
-  const setAddressOnLocalStorage = (key: string, value: string): void => localStorage.setItem(key, value)
   
   const getAddress = async (): Promise<AddressResponseApiProps> => {
 
@@ -65,11 +87,15 @@ export const Property: React.FC = () => {
 
   const handleAddress = async (): Promise<void> => {
 
+    if(!zipCodeToSearchAddress)
+      return
+
     // get user address from viacep api
     const { logradouro, bairro, localidade, uf } = await getAddress()
 
     //set user address
     setUserAddress({
+      zipcode: +zipCodeToSearchAddress,
       street: logradouro,
       district: bairro,
       city: localidade,
@@ -114,7 +140,12 @@ export const Property: React.FC = () => {
           type="number"
           className="font-sans p-2 w-14 sm:w-20 h-max border border-blue-500 text-center text-2xl text-cyan-600 outline-none disabled:border-slate-300 [&::-webkit-inner-spin-button]:appearance-none"
           placeholder={hasNumber ? "Number": "---------------"}
-          {...register("property.address.number")}
+          {...register("property.address.number", {
+            onChange: e => {
+              setOnLocalStorage("addressNumber", e.target.value)
+              return setOptionalAddressNumber(+e.target.value)
+            }
+          })}
           disabled={!hasNumber}
         />
         <input
@@ -151,7 +182,12 @@ export const Property: React.FC = () => {
         type="text"
         className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none disabled:border-slate-300"
         placeholder="Complement"
-        {...register("property.address.complement")}
+        {...register("property.address.complement", {
+          onChange: e => {
+            setOnLocalStorage("addressComplement", e.target.value)
+            setOptionalAddressComplement(e.target.value)
+          }
+        })}
         disabled={userAddress ? false : true}
       />
     </section>
