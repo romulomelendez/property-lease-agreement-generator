@@ -9,7 +9,7 @@ import { getOnLocalStorage, setOnLocalStorage } from "@/utils"
 export const Property: React.FC = () => {
 
   const [userAddress, setUserAddress] = useState<AddressProps>()
-  const [, setOptionalAddressNumber] = useState<number>()
+  const [, setOptionalAddressNumber] = useState<number | null>()
   const [, setOptionalAddressComplement] = useState<string>()
   const [zipCodeToSearchAddress, setZipCodeToSearchAddress] = useState<string>()
   const [hasNumber, setHasNumber] = useState<boolean>(false)
@@ -68,7 +68,7 @@ export const Property: React.FC = () => {
       }
     }
   }, [setValue, userAddress])
-  
+
   const getAddress = async (): Promise<AddressResponseApiProps> => {
 
     // const addressRespondeData: AddressResponseApiProps = await (
@@ -155,14 +155,15 @@ export const Property: React.FC = () => {
           checked={hasNumber}
         />
       </div>
-      <div className="flex justify-between gap-2">
+      <div className="flex flex-col sm:flex-row justify-between gap-2">
         <input
           type="text"
-          className="font-sans p-2 w-48 h-max border border-blue-500 text-2xl text-cyan-600 outline-none disabled:border-slate-300"
+          className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none disabled:border-slate-300"
           placeholder="District"
           {...register("property.address.district")}
           disabled={!userAddress?.district ? true : false}
         />
+        <div className="flex gap-2">
         <input
           type="text"
           className="font-sans p-2 w-full h-max border border-blue-500 text-2xl text-cyan-600 outline-none disabled:border-slate-300"
@@ -177,6 +178,7 @@ export const Property: React.FC = () => {
           {...register("property.address.state")}
           disabled={!userAddress?.state ? true : false}
         />
+        </div>
       </div>
       <input
         type="text"
