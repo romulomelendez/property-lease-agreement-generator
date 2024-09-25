@@ -69,6 +69,17 @@ export const Property: React.FC = () => {
     }
   }, [setValue, userAddress])
 
+  const handleNumber = (isChecked: boolean | string) => {
+    console.log(isChecked)
+
+    if(!isChecked){
+      setOptionalAddressNumber(null)
+      setOnLocalStorage("addressNumber", "")
+      setValue("property.address.number", "")
+    }
+    setHasNumber(!hasNumber)
+  }
+
   const getAddress = async (): Promise<AddressResponseApiProps> => {
 
     // const addressRespondeData: AddressResponseApiProps = await (
@@ -151,7 +162,7 @@ export const Property: React.FC = () => {
         <input
           type="checkbox"
           className="h-6 w-6 cursor-pointer"
-          onChange={() => setHasNumber(!hasNumber)}
+          onChange={ e => handleNumber(e.target.checked)}
           checked={hasNumber}
         />
       </div>
