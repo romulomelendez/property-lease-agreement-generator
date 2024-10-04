@@ -2,8 +2,8 @@
 
 import { ReactElement, useState } from "react"
 
-import { zodResolver } from "@hookform/resolvers/zod"
 import { FormProvider, SubmitHandler, useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
 import { BiSolidFilePdf } from "react-icons/bi"
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md"
 
@@ -16,8 +16,8 @@ import {
   Rental1,
   Rental2,
   Renter,
-  // Signature,
-  // WitnessAndGuarantor
+  WitnessAndGuarantor,
+  Signature
 } from "@/components"
 
 const Home: React.FC = () => {
@@ -28,8 +28,8 @@ const Home: React.FC = () => {
     <Renter key="renter-form" />,
     <Rental1 key="rental1-form" />,
     <Rental2 key="rental2-form" />,
-    // <WitnessAndGuarantor key="witnessAndGuarantor-form" />,
-    // <Signature key="signature-form" />
+    <WitnessAndGuarantor key="witnessAndGuarantor-form" />,
+    <Signature key="signature-form" />
   ])
   const [formStep, setFormStep] = useState<number>(0)
 

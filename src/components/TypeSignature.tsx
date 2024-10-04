@@ -1,59 +1,45 @@
-import { useEffect, useState } from "react"
-
-import { useFormContext } from "react-hook-form"
+import { useState } from "react"
 
 export const TypeSignature: React.FC = () => {
-  
   const [signature, setSignature] = useState<string>("")
-  const [_, setFont] = useState<string>("")
-  const { register, watch } = useFormContext()
-
-  useEffect(() => {
-
-    const subscription = watch((signatureData) =>setSignature(signatureData.signature))
-
-    return () => subscription.unsubscribe()
-  }, [watch])
+  const [_, setFont] = useState<string>("sans")
 
   return (
-    <section className="flex flex-col gap-1 p-1 w-full h-64">
+    <section className="flex flex-col gap-2">
       <input
         type="text"
-        className="font-sans text-lg text-blue-800 mb-2 p-2 border-2 border-slate-400 outline-none"
-        value={signature}
+        className="font-sans text-3xl text-blue-500 mb-2 p-2 border-b-2 border-blue-500 outline-none"
         placeholder="Type your Signature here"
-        {...register("signature")}
+        onChange={e => setSignature(e.target.value)}
       />
-      <div className="flex flex-col gap-2">
-        <button
-          type="button"
-          className="font-sans text-left text-md text-blue-500 cursor-pointer h-10 p-2 border border-blue-500 focus:ring focus:ring-green-300"
-          onClick={() => setFont("sans")}
-        >
-          {signature}
-        </button>
-        <button
-          type="button"
-          className="font-serif text-left text-md text-blue-500 cursor-pointer h-10 p-2 border border-blue-500 focus:ring focus:ring-green-300"
-          onClick={() => setFont("serif")}
-        >
-          {signature}
-        </button>
-        <button
-          type="button"
-          className="font-mono text-left text-md text-blue-500 cursor-pointer h-10 p-2 border border-blue-500 focus:ring focus:ring-green-300"
-          onClick={() => setFont("mono")}
-        >
-          {signature}
-        </button>
-        <button
-          type="button"
-          className="font-normal text-left text-md text-blue-500 cursor-pointer h-10 p-2 border border-blue-500 focus:ring focus:ring-green-300"
-          onClick={() => setFont("normal")}
-        >
-          {signature}
-        </button>
-      </div>
+      {
+        signature && (
+          <>
+            <button
+              type="button"
+              className="font-vibes text-3xl text-blue-500 cursor-pointer h-max p-2 border border-slate-300 focus:ring focus:ring-green-300 text-nowrap overflow-x-scroll no-scrollbar"
+              onClick={() => setFont("vibes")}
+
+            >
+              {signature}
+            </button>
+            <button
+              type="button"
+              className="font-dancing text-3xl text-blue-500 cursor-pointer h-max p-2 border border-slate-300 focus:ring focus:ring-green-300 text-nowrap overflow-x-scroll no-scrollbar"
+              onClick={() => setFont("dancing")}
+            >
+              {signature}
+            </button>
+            <button
+              type="button"
+              className="font-allura text-3xl text-blue-500 cursor-pointer h-max p-2 border border-slate-300 focus:ring focus:ring-green-300 text-nowrap overflow-x-scroll no-scrollbar"
+              onClick={() => setFont("allura")}
+            >
+              {signature}
+            </button>
+          </>
+        )
+      }
     </section>
   )
 }
