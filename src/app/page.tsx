@@ -42,8 +42,8 @@ const Home: React.FC = () => {
   })
 
   return (
-    <main className="flex flex-col md:flex-row bg-yellow-500">
-      <section className="flex flex-col justify-center items-center gap-3 p-10 h-screen md:w-1/2">
+    <main className="flex flex-col lg:flex-row bg-yellow-500">
+      <section className="flex flex-col justify-center items-center gap-3 p-10 h-screen lg:w-1/2">
         <span className="text-center font-bold text-blue-800 text-8xl">
           Lease Agreement Generator
         </span>
@@ -92,7 +92,7 @@ const Home: React.FC = () => {
         </section>
       </section>
 
-      <section className="w-screen md:w-1/2">
+      <section className="w-screen lg:w-1/2">
         <PdfViewer />
       </section>
     </main>
